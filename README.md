@@ -2,27 +2,25 @@
 
 ## Overview
 
-This repository contains a Python implementation and analysis of Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) for face recognition. The code utilizes the Carnegie Mellon University Pose, Illumination, and Expression (CMU PIE) dataset to evaluate the performance of these dimensionality reduction techniques.
-
-## Introduction
+The Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) analyses for face recognition are implemented in Python and are available in this repository. The code assesses the effectiveness of these dimensionality reduction strategies using the Carnegie Mellon University Pose, Illumination, and Expression (CMU PIE) dataset.
 
 The goal of this project is to enhance face recognition accuracy through efficient feature extraction and dimensionality reduction. The code focuses on PCA and LDA, two widely used techniques in machine learning.
 
 ### Principal Component Analysis (PCA)
 
-PCA is employed to capture the maximum variance in the data. The `myPCA` function centralizes the data, computes the covariance matrix, performs eigen-decomposition, and selects the top eigenvectors for dimensionality reduction.
+This project aims to improve face recognition accuracy by reducing dimensionality and extracting features in an efficient manner. The code primarily uses two popular machine learning techniques: PCA and LDA.
 
 ### Linear Discriminant Analysis (LDA)
 
-LDA goes beyond PCA by not only reducing dimensionality but also enhancing class separability. The `myLDA` function calculates within-class and between-class scatter matrices, performs eigen-decomposition, and selects eigenvectors for optimal class separation.
+Beyond PCA, LDA improves class separability in addition to dimensionality reduction. The `myLDA` function chooses eigenvectors for the best possible class separation, does eigen-decomposition, and computes within- and between-class scatter matrices.
 
 ## Dataset and Classification
 
-The CMU PIE dataset, consisting of facial images from 68 subjects under varying lighting conditions, is utilized. The dataset is split into training and testing sets for different training sizes (5, 10, 15 samples per subject). The K-Nearest Neighbors (KNN) classifier is employed for face recognition.
+The CMU PIE dataset is used, which consists of 68 subjects' face images taken in various lighting conditions. To accommodate varying training sizes (5, 10, 15 samples per subject), the dataset is divided into training and testing sets. For face recognition, the K-Nearest Neighbours (KNN) classifier is used.
 
 ## Results and Analysis
 
-The code iterates through different training sizes, applies PCA and LDA, and records the running time and accuracy for each approach. The results are displayed in a tabular format, providing insights into the performance of PCA and LDA under various scenarios.
+The code applies PCA and LDA, cycles through various training sizes, and logs the accuracy and running time for each method. The tabular format of the results displays the results and offers insights into how well PCA and LDA perform in different scenarios.
 
 ### PCA
 
@@ -34,6 +32,6 @@ LDA is employed to enhance class separability. Within-Class and Between-Class Sc
 
 ## Conclusion
 
-This project exemplifies the synergy between dimensionality reduction and classification techniques, offering valuable insights into their combined impact on face recognition tasks. Further analysis, optimization, and exploration of additional datasets could extend the applicability and robustness of these techniques in real-world scenarios.
+This project provides insights into the combined effects of dimensionality reduction and classification techniques on face recognition tasks, and is an excellent example of how these techniques work well together. Extensive examination, refinement, and investigation of supplementary datasets may expand the suitability and resilience of these methodologies in practical situations.
 
-Feel free to explore the code and experiment with different datasets to gain a deeper understanding of PCA and LDA in the context of face recognition.
+To learn more about PCA and LDA in the context of face recognition, feel free to experiment with various datasets and explore the code.
