@@ -84,3 +84,50 @@ The code incorporates optimization techniques like Cholesky decomposition and re
 This code expands on previous dimensionality reduction techniques, incorporating LDA. The comparison with PCA allows for understanding the impact of class-aware dimensionality reduction on face recognition tasks. The implementation introduces modifications and optimizations for a comprehensive exploration.
 
 Feel free to experiment with different datasets and parameters for a deeper understanding of these techniques in diverse scenarios.
+
+
+# Principal Component Analysis (PCA) and Eigenfaces Visualization
+
+The Python code (eigen_faces.py) performs Principal Component Analysis (PCA) on face images from the CMU PIE dataset and visualizes the resulting eigenfaces.
+
+## Functions:
+
+### 1. PCA
+
+The `PCA` function takes a data matrix as input and performs Principal Component Analysis.
+
+- **Parameters:**
+  - `data`: Data matrix where each row vector represents a data point.
+  - `options.ReducedDim`: The dimensionality of the reduced subspace. If 0, all dimensions will be kept (default is 0).
+  - `options.PCARatio`: The ratio of the sum of preserved eigenvalues to the total sum of eigenvalues.
+
+- **Returns:**
+  - `eigvector`: Each column is an embedding function. For a new data point `x`, `y = x @ eigvector` will be the embedding result of `x`.
+  - `eigvalue`: The sorted eigenvalues of the PCA eigen-problem.
+
+### 2. plot_faces
+
+The `plot_faces` function visualizes a set of face images in a grid layout.
+
+- **Parameters:**
+  - `faces`: Matrix of face images.
+
+## Code Execution:
+
+1. **Loading Data:**
+   - The code loads face images and their corresponding labels from the CMU PIE dataset.
+
+2. **Performing PCA:**
+   - PCA is applied to the entire dataset (`X`) with the option to preserve all eigenvalues (`PCARatio: 1`).
+   - The first five eigenvectors are selected from the result.
+
+3. **Visualizing Original Faces (Commented Out):**
+   - There are commented-out sections for selecting specific individuals and visualizing original faces. Uncomment these sections for further exploration.
+
+4. **Visualizing Eigenfaces:**
+   - The selected eigenvectors are reshaped and normalized to create eigenfaces.
+   - Eigenfaces are then plotted in a row for visualization.
+
+5. **Displaying Plots:**
+   - The final plots include a row of original faces (if uncommented) and a row of eigenfaces.
+
