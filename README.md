@@ -14,11 +14,11 @@ This project aims to improve face recognition accuracy by reducing dimensionalit
 
 Beyond PCA, LDA improves class separability in addition to dimensionality reduction. The `myLDA` function chooses eigenvectors for the best possible class separation, does eigen-decomposition, and computes within- and between-class scatter matrices.
 
-### Dataset and Classification
+#### Dataset and Classification
 
 The CMU PIE dataset is used, which consists of 68 subjects' face images taken in various lighting conditions. To accommodate varying training sizes (5, 10, 15 samples per subject), the dataset is divided into training and testing sets. For face recognition, the K-Nearest Neighbours (KNN) classifier is used.
 
-### Results and Analysis
+#### Results and Analysis
 
 The code applies PCA and LDA, cycles through various training sizes, and logs the accuracy and running time for each method. The tabular format of the results displays the results and offers insights into how well PCA and LDA perform in different scenarios.
 
@@ -30,7 +30,7 @@ PCA is applied to project the data into a reduced space, and the explained varia
 
 LDA is employed to enhance class separability. Within-Class and Between-Class Scatter matrices are computed, and the resulting eigenvectors are utilized for dimensionality reduction.
 
-### Conclusion
+#### Conclusion
 
 This project provides insights into the combined effects of dimensionality reduction and classification techniques on face recognition tasks, and is an excellent example of how these techniques work well together. Extensive examination, refinement, and investigation of supplementary datasets may expand the suitability and resilience of these methodologies in practical situations.
 
